@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="/site/Landing Pages/Articles Page/articles-main-style.css"> 
+  <script src="/site/Landing Pages/Articles Page/jquery-2.1.1.js"></script>
+  <script src="/site/Landing Pages/Articles Page/jquery.mobile.custom.min.js"></script>
+  <script src="/site/Landing Pages/Articles Page/main.js"></script> <!-- Resource jQuery -->
+  <script src="/site/Landing Pages/Articles Page/modernizr.js"></script>
+  <link type="text/css" rel="stylesheet" href="site/Landing Pages/AboutPage/css/about_page_style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CVarela+Round" rel="stylesheet">
+      <link rel="stylesheet" href="site/Landing Pages/AboutPage/css/font-awesome.min.css">
+
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '862220270797606');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=862220270797606&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code --> 
+ 
+
+
+
+<style type="text/css">
+ /* Modal styling */
+ /* The careers_main_modal (background) */
+.careers_main_modal {
+  position: fixed;
+  padding-left:20px; 
+  background-color: white;
+  font-family: Tahoma;
+  border: 10px solid orange;
+  border-radius: 10px; 
+  overflow: hidden;
+  top: 40px;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+  display: none;
+  height: 580px; 
+  width: 700px;
+   -webkit-box-shadow:  0px 0px 0px 9999px rgba(0, 0, 0, 0.5);
+  box-shadow:  0px 0px 0px 9999px rgba(0, 0, 0, 0.5);
+  z-index:100000;
+  
+}
+@media screen and (max-width: 600px){
+  .careers_main_modal{
+    width:100%;
+    height:100%;
+    top:0px;
+    border:0px;
+    border-radius:0px;
+  }
+}
+
+
+/* careers_main_modal Content */
+.careers_main_modal-content {
+    width: 450px;
+    display: inline-block;
+    position: relative;
+    text-align: right;
+    background-color: #eee;
+    margin: 20px 0;
+    height: 200px ;
+
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+.close {
+  float: right;
+  right:3px;
+  top:3px;
+}
+
+
+.address{
+  color:white;
+  font-weight:300;
+}
+ 
+ /* End of modal styling */
+ 
+ 
+ 
+.button-effect {
+    border: solid black 1px; 
+    font-size: 14px; 
+    background-color: dodgerblue; 
+    color: white; 
+    border-radius: 10px; 
+    width:140px; 
+    height: 40px;
+}
+
+.button-effect:hover {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+
+
+
+.button-effect:hover, .button-effect:focus, .button-effect:active {
+  -webkit-transform: translateX(-10px);
+  transform: translateX(-10px);
+}
+.button-effect:hover:before, .button-effect:focus:before, .button-effect:active:before {
+  -webkit-transform: translateX(10px);
+  transform: translateX(10px);
+}
+
+.article-image {
+    width: 100%; 
+    height: 400px; 
+    
+}
+
+.heading {
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  line-height: 1.8;
+  position: relative;
+  } 
+  
+  
+
+.top-button-effect {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+}
+.top-button-effect:before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: '';
+  border-style: solid;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  left: calc(50% - 10px);
+  top: 0;
+  border-width: 0 10px 10px 10px;
+  border-color: dodgerblue transparent dodgerblue transparent;
+}
+.top-button-effect:hover:before, .top-button-effect:focus:before, .top-button-effect:active:before {
+  -webkit-transform: translateY(-10px);
+  transform: translateY(-10px);
+}
+
+.top-button-effect {
+    border: solid black 1px; 
+    font-size: 14px; 
+    background-color: dodgerblue; 
+    color: white ; 
+    border-radius: 5px; 
+    width:80px; 
+    height: 50px;
+}
+  
+@media only screen and (min-width:768px) {
+  #to-top-button {
+   display:none;
+  }
+  
+  .cd-faq-categories {
+    position:relative;
+  }
+  
+  .cd-faq-items {
+    position:relative;
+    top:-100px;
+  }
+}
+
+  
+@media only screen and (max-width:768px){
+  .article-image {
+    width:100%;
+    height:130px;
+  }
+  .row{
+    margin-bottom:0px;
+  }
+}
+ .imageicon{
+        height:40px;
+        margin-left:50%;
+        transform:translatex(-50%);
+        
+    }
+    .row2{
+        width:100%;
+        display:flex;
+        justify-content:space-evenly;
+        flex-wrap: wrap;
+    }
+    .careerbox{
+        width:300px;
+    }
+    .careertitle{
+        text-align:center;
+     
+  }
+  
+  .list {
+    font-weight: 300;
+    color: black;
+  }
+  
+  ul {list-style-type: circle;}
+
+</style>
+
+
+  <title>ATHQ - Articles </title>
+</head>
+
+<br><br>
+<body>
+
+  
+   <div id="features">
+
+    <!-- Container -->
+    <div class="container">
+
+      <!-- Row -->
+      <div class="row">
+
+        <title>Telquest Careers</title>
+            <h2 style="text-align:center; ">Why Telquest International?</h2>
+          
+          <p style="margin-top:30px;">Telquest International is a rapidly growing telecommunications hardware reseller with over 30 years of success as a leader in this fast-paced industry. We are seeking self-motivated, career-oriented, organized, critical thinking, and detail-focused individuals to join our team!
+Advance your career and your professional experience! We offer uncapped earning potential, growth opportunities, and professional training. You will work with our sales, marketing, operations, and management professionals to build our brand. This is a full-time Monday - Friday career opportunity.<br><br>
+
+<hr>
+         
+      </div>
+
+    </div>
+
+  </div>
+  
+  <div class="row2">
+                <div class="careerbox">
+                    <img class="imageicon" src="https://www.erieinsurance.com/-/media/images/icons/spotlight-icons/clock.ashx?h=51&w=50&la=en&hash=7A4E63B55BE5AC182C07BEAEF555A9A731D0FEB6" alt='' />
+                    <h3 class="careertitle">Work-Life Balance</h3>
+                    <p class="spotlightitem-description">About 40 percent of our employees take advantage of our flexible work arrangements and telecommuting. Work-life support is also available to help manage life events.</p>
+                </div>
+                <div class="careerbox">
+                    <img  class="imageicon" src="https://www.erieinsurance.com/-/media/images/icons/spotlight-icons/trophy.ashx?h=51&w=50&la=en&hash=480170636CA1479FFC13411344845344B0F75E2E" alt='' />
+                    <h3 class="careertitle">Award-Winning Team</h3>
+                    <p class="spotlightitem-description">You’ll work for a company that is recognized for superior service. Telquest International is the recipient of numerous honors from prestigious awards.
+                </div>
+                <div class="careerbox">
+                    <img  class="imageicon" src='https://www.erieinsurance.com/-/media/images/icons/spotlight-icons/motorboard.ashx?h=38&w=70&la=en&hash=E16E97FBB8CDFC6DDF75AB0F46373514C1CECFB2' alt='' />
+                    <h3 class="careertitle">Education</h3>
+                    <p class="spotlightitem-description">Our professional development opportunities — insurance courses, management training, higher education and online skill-building courses — can help you progress in your career.</p>
+                </div>
+            </div>
+<style>
+  .jobentry{
+    float:left; 
+    width:100% ; 
+    margin-left:5px; 
+    display:inline-block; 
+    border:0.5px solid black; 
+    border-radius:10px;
+    margin-bottom:10px;
+  }
+
+  .jobs{
+    display:inline-block;
+    width:35%;
+    float:left;
+
+  }
+  .survey{
+    width:55%;
+  }
+  .mainsection{
+    width:100%;
+    display:flex;
+    justify-content:space-evenly;
+    flex-wrap:wrap;
+  }
+@media screen and (max-width: 600px){
+  .jobs{
+    width:100%;
+  }
+  .jobentry{
+    width:100%;
+  }
+  .survey{
+    width:100%; 
+  }
+}
+</style>
+
+
+   <br><hr><br><br>
+   <h2 style="text-align:center; ">Explore your future</h2>
+   <br><br>
+<div class="mainsection">
+<div class="jobs">
+<div class="jobentry">
+<a style="text-align:center;" class="cd-faq-trigger"><h4 style="font-size:16px; margin-bottom:-1px;">Database Management</h4></a>
+<div class="cd-faq-content">
+<center><p>Primary skills and responsibilities:</p></center>
+<ul class="main_list">
+<li class="list">&bull;&nbsp;Database Management</li>
+<li class="list">&bull;&nbsp;Analyze, review, and implement effective strategies to help our data team</li>
+<li class="list">&bull;&nbsp;Above-average verbal and written skills</li>
+<li class="list">&bull;&nbsp;Working knowledge of formulas</li>
+<li class="list">&bull;&nbsp;Data Analytics</li>
+<li class="list">&bull;&nbsp;Strong Organizational skills and detail-oriented</li>
+<li class="list">&bull;&nbsp;Data search using different sources</li>
+<li class="list">&bull;&nbsp;Self-learner</li>
+<li class="list">&bull;&nbsp;Analytical and critical thinker</li>
+<li class="list">&bull;&nbsp;Basic HTML knowledge helpful</li>
+<li class="list">&bull;&nbsp;For this position experience is not necessary, but must be proficient in Microsoft Excel</li>
+<li class="list">&bull;&nbsp;Candidates will be tested on Excel during the interview (vlookup, math formulas, avg cost, text processing)</li>
+<li class="list">&bull;&nbsp;Knowledge of Netsuite is a plus</li>
+</ul>
+<br>
+            
+                    
+        </div> 
+  
+</div>
+
+    <div class="jobentry">
+          
+                
+                  
+                  <a style="text-align:center;" class="cd-faq-trigger"><h4 style="font-size:16px; margin-bottom:-1px;">Data Entry Clerk</h4>
+                  </a>
+                  <div class="cd-faq-content"> 
+        <center><p class="list">Responsibilities:</p></center>
+        <ul>
+          <li class="list" >&bull;&nbsp;Type in data provided</li>
+          <li class="list">&bull;&nbsp;Create spreadsheets with large numbers of figures without mistakes</li>
+          <li class="list">&bull;&nbsp;Verify data by comparing it to source documents</li>
+          <li class="list">&bull;&nbsp;Update existing data</li>
+          <li class="list">&bull;&nbsp;Retrieve data from the database or files as requested</li>
+          <li class="list">&bull;&nbsp;Perform regular backups to ensure data preservation</li>
+          </ul></center>
+          <center><p class="list">Requirements:</p></center>
+          <ul>
+          <li class="list">&bull;&nbsp;Proven experience as data entry clerk</li>
+          <li class="list">&bull;&nbsp;Fast typing skills</li>
+          <li class="list">&bull;&nbsp;Must know MS Excel (VLOOKUP)</li>
+          <li class="list">&bull;&nbsp;Basic understanding of databases</li>
+          <li class="list">&bull;&nbsp;Familiarity with spreadsheets</li>
+          <li class="list">&bull;&nbsp;Great attention to detail</li>
+          <li class="list">&bull;&nbsp;Knowledge of eBay is not required but is a plus</li>
+          <li class="list">&bull;&nbsp;High school degree or equivalent</li>
+          </ul>
+          <br>
+                                 
+                    
+        </div> 
+  
+</div>
+
+
+
+    <div class="jobentry">
+          
+                 
+        <a style="text-align:center;" class="cd-faq-trigger"><h4 style="font-size:16px; margin-bottom:-1px;">Entry Level Purchasing Agent</h4></a>
+        <div class="cd-faq-content">
+                        <center><p class="list">Responsibilities:</p></center>
+                        <ul>
+                        <li class="list">&bull;&nbsp;Negotiate with suppliers, vendors, manufacturers and clients</li>
+                        <li class="list">&bull;&nbsp;Daily correspondence via email/phone with vendors</li>
+                        <li class="list">&bull;&nbsp;Prepare purchase orders by verifying details, specifications, and pricing</li>
+                        <li class="list">&bull;&nbsp;Monitor and expedite orders</li>
+                        <li class="list">&bull;&nbsp;Maintain supplier's database and keep employees up to date on any changes</li>
+                        <li class="list">&bull;&nbsp;Keep track of incoming orders to ensure equipment arrives on time</li>
+                        <li class="list">&bull;&nbsp;Under direct supervision, make purchases from vendors at the lowest cost</li>
+                        </ul>
+                        <center><p class="list">Qualifications:</p></center>
+                        <ul>
+                        <li class="list">&bull;&nbsp;Negotiating skills</li>
+                        <li class="list">&bull;&nbsp;Highly proficient in Microsoft Office (Excel, Office 365, Word)</li>
+                        <li class="list">Ability to work independently</li>
+                        <li class="list">&bull;&nbsp;Ability to establish and maintain relationships with vendors, suppliers, manufacturers, and co-workers</li>
+                        <li class="list">&bull;&nbsp;Written/Verbal communication skills</li>
+                        <li class="list">&bull;&nbsp;High attention to detail</li>
+                        <li class="list">&bull;&nbsp;Willingness to learn/self-motivated</li>
+                        </ul>
+                        <br>
+                    
+                </div> 
+  
+</div>
+
+    <div class="jobentry">
+          
+                
+                  <a style="text-align:center;" class="cd-faq-trigger"><h4 style="font-size:16px; margin-bottom:-1px;">Entry Level eCommerce</h4></a>
+                
+                   <div class="cd-faq-content">
+                        <center><p class="list">Primary Responsibilities:</p></center>
+                        <ul>
+                        <li class="list">&bull;&nbsp;Develop and implement a strategic plan to manage our website</li>
+                        <li class="list">&bull;&nbsp;Drive traffic and sales to website</li>
+                        <li class="list">&bull;&nbsp;Pricing strategy for website items</li>
+                        <li class="list">&bull;&nbsp;Accountable for demand-forecasting, inventory in-stock performance, and weekly sales reporting</li>
+                        <li class="list">&bull;&nbsp;Partner with purchasing team to ensure brand and product are detailed properly</li>
+                        <li class="list">&bull;&nbsp;Responsible for profitability and sales revenue targets for our website</li>
+                        <li class="list">&bull;&nbsp;Making sure product listings are properly written to meet minimum SEO requirements.</li>
+                        </ul>
+
+                        <center><p class="list">Qualifications:</p></center>
+                        <ul>
+                        <li class="list">&bull;&nbsp;Must be proficient with Microsoft Excel (you will be tested)</li>
+                        <li class="list">&bull;&nbsp;Vlookup</li>
+                        <li class="list">&bull;&nbsp;Math formulas (average, mode, sum)</li>
+                        <li class="list">&bull;&nbsp;Concatenate</li>
+                        <li class="list">&bull;&nbsp;Index</li>
+                        <li class="list">&bull;&nbsp;Match</li>
+                        <li class="list">&bull;&nbsp;Filtering</li>
+                        <li class="list">&bull;&nbsp;Basic knowledge of HTML/CSS</li>
+                        <li class="list">&bull;&nbsp;Knowledge of NetSuite, javaScript, VBA, Social Media Ads, editing/design skills (Photoshop, Gimp, Pixlr) is a plus.</li>
+                        </ul>
+                          <br>
+
+                </div> 
+      
+
+</div>  
+
+
+<div class="jobentry">
+          
+                 
+        <a style="text-align:center;" class="cd-faq-trigger"><h4 style="font-size:16px; margin-bottom:-1px;">Electronics  Refurbisher</h4></a>
+        <div class="cd-faq-content">
+                        <center><p class="list">Responsibilities:</p></center>
+                        <ul>
+                        <li class="list">&bull;&nbsp;Carefully disassemble and reassemble phones back to their original state without breaking or compromising internal components</li>
+                        <li class="list">&bull;&nbsp;Clean and refurbish phones using cleaning equipment, refurbishing tools, and hand tools</li>
+                        <li class="list">&bull;&nbsp;Use of a buffing machine</li>
+                        <li class="list">&bull;&nbsp;Maintain a clean and safe work area at all times</li>
+                        </ul>
+                        <center><p class="list">Qualifications:</p></center>
+                        <ul>
+                        <li class="list">&bull;&nbsp;Reliable means of transportation</li>
+                        <li class="list">&bull;&nbsp;Basic understanding of hand tools such as screwdrivers</li>
+                        <li class="list">&bull;&nbsp;Ability to sit, stand, or bend for extended periods of time</li>
+                        <li class="list">&bull;&nbsp;Ability to perform repetitive tasks with speed and accuracy</li>
+                        <li class="list">&bull;&nbsp;Very high attention to detail</li>
+                        <li class="list">&bull;&nbsp;Ability to read and comprehend verbal instructions and instruction manuals</li>
+                        </ul>
+                        <br>
+
+                </div> 
+  
+</div>
+<div class="jobentry">
+          
+                
+                  <a style="text-align:center;" class="cd-faq-trigger"><h4 style="font-size:16px; margin-bottom:-1px;">VoIP Phone Tester (QA)</h4></a>
+                
+                   <div class="cd-faq-content">                      
+                        <center class="list"><p>Requirements:</p></center>
+                        <ul>
+                        <li class="list">&bull;&nbsp;Knowledge of what IP addresses, MAC addresses, Routers, and switches are</li>
+                        <li class="list">&bull;&nbsp;Must be computer literate</li>
+                        <li class="list">&bull;&nbsp;Must be able to test, default, and upgrade firmware on VoIP phones</li>
+                        <li class="list">&bull;&nbsp;Must be able to test and default routers</li>
+                        <li class="list">&bull;&nbsp;Must be able to test switches</li>
+                        <li class="list">&bull;&nbsp;Ability to stand and complete repetitive tasks for long periods of time</li>
+                       
+                        </ul>
+                       
+                          <br>
+                    
+                </div> 
+      
+
+
+
+    
+</div>
+
+<div class="jobentry">
+          
+                
+                  <a style="text-align:center;" class="cd-faq-trigger"><h4 style="font-size:16px; margin-bottom:-1px;">Inside Sales Representative </h4></a>
+                
+                   <div class="cd-faq-content">                      
+                         <center><p class="list">Responsibilities:</p></center>
+                        <ul>
+                        <li class="list">&bull;&nbsp;Drive revenue growth through incremental sales and promoting regular buying patterns</li>
+                        <li class="list">&bull;&nbsp;Achievement of Sales Goals</li>
+                        <li class="list">&bull;&nbsp;Provide quality customer service through active listening, clear communication, and consistent follow through</li>
+                        <li class="list">&bull;&nbsp;Serve as business consultant to customers identifying ways that Telquest International can assist them with meeting their goals</li>
+                        <li class="list">&bull;&nbsp;Involvement and ownership of key elements of the brand sales and marketing strategy and resulting components</li>
+                         <li class="list">&bull;&nbsp;Key account management</li>
+                          <li class="list">&bull;&nbsp;Sales forecast, deployment design goal setting and measurement</li>
+                        </ul>
+                        <center><p class="list">Qualifications:</p></center>
+                        <ul>
+                        <li class="list">&bull;&nbsp;Must be customer centric with ability to anticipate needs</li>
+                        <li class="list">&bull;&nbsp;Solid analytical and problem-solving skills</li>
+                        <li class="list">&bull;&nbsp;Strong organizational & planning skills are required</li>
+                        <li class="list">&bull;&nbsp;AExcellent prioritizing & decision-making skills are required</li>
+                        <li class="list">&bull;&nbsp;Proficiency with MS Word, Outlook, Excel, Power Point, etc</li>
+                        <li class="list">&bull;&nbsp;Ability to read and comprehend verbal instructions and instruction manuals</li>
+                        <li class="list">&bull;&nbsp;Ability to document, organize and summarize data in complete detail</li>
+
+                        <li class="list">&bull;&nbsp;Must have excellent interpersonal, verbal, and written communication skills</li>
+
+                        <li class="list">&bull;&nbsp;Ability to learn internal ERP tools such as NetSuite</li>
+
+                        <li class="list">&bull;&nbsp;Ability to learn and follow Sales Process Training</li>
+
+                        <li class="list">&bull;&nbsp;College Degree preferred</li>
+
+
+                        </ul>
+                        <br>
+                </div> 
+      
+
+
+
+    
+</div>
+
+</div>
+<div class="survey">
+  <iframe src="https://services.cognitoforms.com/f/NvGJg6vRJkW-FSqZu6r31w?id=1" style="position:relative;width:1px;min-width:100%;*width:100%;" frameborder="0" scrolling="yes" seamless="seamless" height="497" width="100%"></iframe>
+</div>
+</div>
+            
+            <br><br><br>
+<div id="mycareers_main_modal" class="careers_main_modal">
+<i class="fa fa-times close" onclick="hide('mycareers_main_modal')" aria-hidden="true"></i>
+ 
+<script src="https://services.cognitoforms.com/scripts/embed.js"></script>
+</div>
+<script>
+
+
+// Get the careers_main_modal
+var careers_main_modal = document.getElementById('mycareers_main_modal');
+
+// Get the button that opens the careers_main_modal
+var btn = document.getElementById("careers_myBtn");
+var btn2 = document.getElementById("careers_myBtn2");
+var btn3 = document.getElementById("careers_myBtn3");
+var btn4 = document.getElementById("careers_myBtn4");
+var btn5 = document.getElementById("careers_myBtn5");
+var btn6 = document.getElementById("careers_myBtn6");
+var btn7 = document.getElementById("careers_myBtn7");
+var btn8 = document.getElementById("careers_myBtn8");
+
+// Get the <span> element that closes the careers_main_modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the careers_main_modal 
+btn.onclick = function() {
+  careers_main_modal.style.display = "block";
+}
+
+// When the user clicks the button, open the careers_main_modal 
+btn2.onclick = function() {
+  careers_main_modal.style.display = "block";
+}
+
+btn3.onclick = function() {
+  careers_main_modal.style.display = "block";
+}
+
+btn4.onclick = function() {
+  careers_main_modal.style.display = "block";
+}
+
+btn5.onclick = function() {
+  careers_main_modal.style.display = "block";
+}
+
+btn6.onclick = function() {
+  careers_main_modal.style.display = "block";
+}
+
+btn7.onclick = function() {
+  careers_main_modal.style.display = "block";
+}
+
+btn8.onclick = function() {
+  careers_main_modal.style.display = "block";
+}
+function hide(target) {
+    document.getElementById(target).style.display = 'none';
+}
+// When the user clicks on <span> (x), close the careers_main_modal
+
+
+
+</script>
+
+</body>
+</html>
